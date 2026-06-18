@@ -27,7 +27,7 @@ class HomeController extends Controller
                 'price' => $p->price,
                 'price_formatted' => 'Rp ' . number_format((float) $p->price, 0, ',', '.'),
                 'image' => $p->image,
-                'image_url' => $p->image ? '/storage/uploads/products/' . $p->image : null,
+                'image_url' => $p->image ? '/storage/' . $p->image : null,
                 'category_name' => $p->category?->name,
                 'featured' => $p->featured,
             ]);
@@ -45,7 +45,7 @@ class HomeController extends Controller
                 'price' => $p->price,
                 'price_formatted' => 'Rp ' . number_format((float) $p->price, 0, ',', '.'),
                 'image' => $p->image,
-                'image_url' => $p->image ? '/storage/uploads/products/' . $p->image : null,
+                'image_url' => $p->image ? '/storage/' . $p->image : null,
                 'category_name' => $p->category?->name,
             ]);
 
@@ -72,7 +72,7 @@ class HomeController extends Controller
                 'slug' => $i->slug,
                 'excerpt' => $i->excerpt,
                 'image' => $i->image,
-                'image_url' => $i->image ? '/storage/uploads/articles/' . $i->image : null,
+                'image_url' => $i->image ? '/storage/' . $i->image : null,
             ]);
 
         $settings = Setting::all()->keyBy('key')->map->value;

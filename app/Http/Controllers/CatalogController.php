@@ -41,7 +41,7 @@ class CatalogController extends Controller
             'price' => $p->price,
             'price_formatted' => 'Rp ' . number_format((float) $p->price, 0, ',', '.'),
             'image' => $p->image,
-            'image_url' => $p->image ? '/storage/uploads/products/' . $p->image : null,
+            'image_url' => $p->image ? '/storage/' . $p->image : null,
             'shopee_link' => $p->shopee_link,
             'tokopedia_link' => $p->tokopedia_link,
             'category_name' => $p->category?->name,
@@ -100,7 +100,7 @@ class CatalogController extends Controller
                 'price' => $p->price,
                 'price_formatted' => 'Rp ' . number_format((float) $p->price, 0, ',', '.'),
                 'image' => $p->image,
-                'image_url' => $p->image ? '/storage/uploads/products/' . $p->image : null,
+                'image_url' => $p->image ? '/storage/' . $p->image : null,
                 'category_name' => $p->category?->name,
             ]);
 
@@ -115,7 +115,7 @@ class CatalogController extends Controller
                 'price' => $product->price,
                 'price_formatted' => 'Rp ' . number_format((float) $product->price, 0, ',', '.'),
                 'image' => $product->image,
-                'image_url' => $product->image ? '/storage/uploads/products/' . $product->image : null,
+                'image_url' => $product->image ? '/storage/' . $product->image : null,
                 'shopee_link' => $product->shopee_link,
                 'tokopedia_link' => $product->tokopedia_link,
                 'whatsapp' => $product->whatsapp,

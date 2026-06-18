@@ -21,7 +21,7 @@ class ArticleController extends Controller
             'slug' => $i->slug,
             'excerpt' => $i->excerpt,
             'image' => $i->image,
-            'image_url' => $i->image ? '/storage/uploads/articles/' . $i->image : null,
+            'image_url' => $i->image ? '/storage/' . $i->image : null,
         ])->values();
 
         return Inertia::render('ArticleIndex', [
@@ -53,7 +53,7 @@ class ArticleController extends Controller
                 'slug' => $i->slug,
                 'excerpt' => $i->excerpt,
                 'image' => $i->image,
-                'image_url' => $i->image ? '/storage/uploads/articles/' . $i->image : null,
+                'image_url' => $i->image ? '/storage/' . $i->image : null,
             ]);
 
         return Inertia::render('ArticleDetail', [
@@ -64,7 +64,7 @@ class ArticleController extends Controller
                 'excerpt' => $article->excerpt,
                 'content' => $article->content,
                 'image' => $article->image,
-                'image_url' => $article->image ? '/storage/uploads/articles/' . $article->image : null,
+                'image_url' => $article->image ? '/storage/' . $article->image : null,
             ],
             'relatedArticles' => $relatedArticles,
         ]);
