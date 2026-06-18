@@ -36,6 +36,7 @@ class ProductForm
                     ->preload(),
                 FileUpload::make('image')
                     ->label('Gambar Produk')
+                    ->disk('public')
                     ->directory('uploads/products')
                     ->image()
                     ->imageEditor()

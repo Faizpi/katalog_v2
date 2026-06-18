@@ -27,6 +27,7 @@ class InspirationForm
                     ->columnSpanFull(),
                 FileUpload::make('image')
                     ->label('Gambar Artikel')
+                    ->disk('public')
                     ->directory('uploads/articles')
                     ->image()
                     ->imageEditor()
