@@ -1,0 +1,9 @@
+@import '../Components/Navbar.css';
+@import '../Components/Footer.css';
+@import '../Components/ProductCard.css';
+@import '../Components/AnimatedComponents.css';
+@import '../Components/ChatBot.css';
+@import '../Pages/Home.css';
+@import '../Pages/Catalog.css';
+@import '../Pages/ProductDetail.css';
+@import '../Pages/ArticleDetail.css';
