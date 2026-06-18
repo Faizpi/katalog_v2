@@ -6,10 +6,6 @@
     RewriteEngine On
     RewriteBase /
 
-    # Redirect /admin to Filament panel
-    RewriteRule ^admin/?$ https://api.hibiscusefsya.com/ [R=301,L]
-    RewriteRule ^admin/(.*)$ https://api.hibiscusefsya.com/$1 [R=301,L]
-
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
