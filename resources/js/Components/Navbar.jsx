@@ -4,7 +4,7 @@ import './Navbar.css'
 
 function Navbar() {
   const logoSrc = '/logo.png'
-  const { url, settings = {} } = usePage().props
+  const { url = '/', settings = {} } = usePage().props
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -60,7 +60,7 @@ function Navbar() {
           </Link>
           <Link 
             href="/katalog" 
-            className={`nav-link ${url.startsWith('/katalog') ? 'active' : ''}`}
+            className={`nav-link ${url?.startsWith('/katalog') ? 'active' : ''}`}
           >
             Katalog
           </Link>
